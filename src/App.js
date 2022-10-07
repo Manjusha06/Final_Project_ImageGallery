@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import {Switch,Route} from 'react-router-dom';
+import Home from './Component/Home';
+import Login from './Component/Login';
+import Register from './Component/Register';
+import Contact from './Component/Contact';
+import Error from './Component/Error';
+import List from './Component/List';
+import Footer from './Component/Footer';
+import Gallery from './Component/Gallery';
+import Sell from './Component/Sell';
+import Payment from './Component/Payment';
+import Admin from './Component/Admin';
+const App=()=>{
+  return(
+    <>
+    <List/>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/register" component={Register}/>
+        <Route exact path="/contact" component={Contact}/>
+        <Route exact path="/gallery" component={Gallery}/>
+        <Route exact path="/sell" component={Sell}/>
+        <Route exact path="/payment" component={Payment}/>
+        <Route exact path="/admin" component={Admin}/>
+        <Route  component={Error}/>
+      </Switch>
+    
+    <Footer/>
+    </>
+  )
 }
 
 export default App;

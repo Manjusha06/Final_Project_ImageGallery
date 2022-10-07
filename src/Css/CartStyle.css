@@ -1,0 +1,17 @@
+.cart{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 20px;
+}
+#btn{
+    color:orange;
+}
+.checkout{
+    border-radius: 10px;;
+    width:80px;
+    height:50px;
+    background-color:slateblue;
+    font-size: 50;
+    color:orange;
+    
+}
